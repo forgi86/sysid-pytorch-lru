@@ -1,6 +1,6 @@
 # sysid-pytorch-lru
 
-A PyTorch implementation of DeepMind's [Linear Recurrent Unit](https://arxiv.org/pdf/2303.06349) (LRU). Application in System identification included as example.
+A PyTorch implementation of DeepMind's [Linear Recurrent Unit](https://arxiv.org/pdf/2303.06349) (LRU). Application in System Identification included as example.
 
 ## Basic usage:
 The basic usage of the LRU block is illustrated in [playground.ipynb](playground.ipynb):
