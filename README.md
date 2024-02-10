@@ -7,10 +7,12 @@ The LRU Layer is a linear dynamical system implemented in state-space form as:
 $$
 \begin{align}
 x_{k} = Ax_{x-1} + B u_k\\
-y_k = RE[C x_k] + D u_k,
+y_k = [C x_k] + D u_k,
 \end{align}
 $$
 where $A$ is diagonal and complex-valued; $B, C$ are full complex-valued; $D$ is full real-valued. 
+
+The use of the parallel scan algorithm makes the execution very fast on modern hardware.
 
 ## Basic usage:
 The basic usage of the LRU block is illustrated in [playground.ipynb](playground.ipynb):
