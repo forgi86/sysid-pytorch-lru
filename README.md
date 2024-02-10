@@ -2,6 +2,16 @@
 
 A PyTorch implementation of DeepMind's [Linear Recurrent Unit](https://arxiv.org/pdf/2303.06349) (LRU). Application in System Identification included as example.
 
+## LRU block
+The LRU Layer is a linear dynamical system implemented in state-space form as:
+$$
+\begin{align}
+x_{k} = Ax_{x-1} + B u_k\\
+y_k = RE[C x_k] + D u_k,
+\end{align}
+$$
+where $A$ is diagonal and complex-valued; $B, C$ are full complex-valued; $D$ is full real-valued. 
+
 ## Basic usage:
 The basic usage of the LRU block is illustrated in [playground.ipynb](playground.ipynb):
 
@@ -9,9 +19,9 @@ The basic usage of the LRU block is illustrated in [playground.ipynb](playground
 import torch
 from lru.linear import LRU
 
-d_state = 200  # hidden state dimension
-d_in = 100
-d_out = 10
+d_state = 200  # state dimension (x)
+d_in = 100 # input dimension (u)
+d_out = 10 # output dimension (y)
 seq_len = 10000  # input sequence length
 batch_size = 32
 
