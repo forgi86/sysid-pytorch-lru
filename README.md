@@ -3,16 +3,16 @@
 A PyTorch implementation of DeepMind's [Linear Recurrent Unit](https://arxiv.org/pdf/2303.06349) (LRU). Application in System Identification included as example.
 
 ## LRU block
-The LRU Layer is a linear dynamical system implemented in state-space form as:
-$$
+The LRU Layer is a sequence-to-sequence model defined by a linear dynamical system and implemented in state-space form as:
+```math
 \begin{align}
 x_{k} = Ax_{x-1} + B u_k\\
-y_k = [C x_k] + D u_k,
+y_k = \mathcal{R}[C x_k] + D u_k,
 \end{align}
-$$
-where $A$ is diagonal and complex-valued; $B, C$ are full complex-valued; $D$ is full real-valued. 
+```
+where $A$ is diagonal and complex-valued; $B, C$ are full complex-valued; $D$ is full real-valued; and $\mathcal{R}[\cdot]$ denotes the real part of its argument.
 
-The use of the parallel scan algorithm makes the execution very fast on modern hardware.
+Smart parameterization/initialization of the system matrices bake the LRU block easy to train numerically. Moreover, the use of the parallel scan algorithm makes execution extremely fast on modern hardware. For more  details, read the paper!
 
 ## Basic usage:
 The basic usage of the LRU block is illustrated in [playground.ipynb](playground.ipynb):
