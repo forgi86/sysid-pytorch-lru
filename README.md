@@ -3,7 +3,7 @@
 A PyTorch implementation of DeepMind's [Linear Recurrent Unit](https://arxiv.org/pdf/2303.06349) (LRU). Application in System Identification included as example.
 
 ## LRU block
-The LRU Layer is a sequence-to-sequence model defined by a linear dynamical system and implemented in state-space form as:
+The LRU block is a sequence-to-sequence model defined by a linear dynamical system and implemented in state-space form as:
 ```math
 \begin{align}
 x_{k} = Ax_{x-1} + B u_k\\
