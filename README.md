@@ -12,7 +12,7 @@ y_k = \mathcal{R}[C x_k] + D u_k,
 ```
 where $A$ is diagonal and complex-valued; $B, C$ are full complex-valued; $D$ is full real-valued; and $\mathcal{R}[\cdot]$ denotes the real part of its argument.
 
-Smart parameterization/initialization of the system matrices make the LRU block easy to train numerically. Moreover, the use of the parallel scan algorithm makes execution extremely fast on modern hardware. For more  details, read the paper!
+Smart parameterization/initialization of the system matrices make the LRU block easy to train numerically. Moreover, the use of [parallel scan algorithms](https://en.wikipedia.org/wiki/Prefix_sum) makes execution extremely fast on modern hardware. For more  details, read the paper!
 
 ## Basic usage:
 The basic usage of the LRU block is illustrated in [playground.ipynb](playground.ipynb):
