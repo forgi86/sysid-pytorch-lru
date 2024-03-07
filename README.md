@@ -14,6 +14,12 @@ where $A$ is diagonal and complex-valued; $B, C$ are full complex-valued; $D$ is
 
 Smart parameterization/initialization of the system matrices make the LRU block easy to train numerically. Moreover, the use of [parallel scan algorithms](https://en.wikipedia.org/wiki/Prefix_sum) makes execution extremely fast on modern hardware. For more  details, read the paper!
 
+## Deep LRU Architecture
+
+LRU units are typically organized in a deep LRU architecture like:
+
+<img src="architecture/lru_architecture.png"  width="500">
+
 ## Basic usage:
 The basic usage of the LRU block is illustrated in [playground.ipynb](playground.ipynb):
 
